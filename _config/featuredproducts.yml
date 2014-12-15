@@ -1,0 +1,11 @@
+---
+name: Featured Products
+---
+
+Product:
+  extensions:
+    - FeaturedProduct
+
+Page_Controller:
+  extensions:
+    - FeaturedProduct_Controller
