@@ -8,7 +8,9 @@ class FeaturedProduct extends DataExtension {
 	);
 	
 	public function updateCMSFields(FieldList $fields){
-		$fields->addFieldToTab('Root.Main', CheckboxField::create('FeaturedProduct', 'Is a featured product?', 0), 'ShortDescription');
+		$fields->addFieldToTab('Root.Main', FieldGroup::create(
+			new CheckboxField('FeaturedProduct', 'Is a featured product?', 0)
+		)->setTitle('Featured Product'), 'Content');
 		
 		return $fields;
 	}
