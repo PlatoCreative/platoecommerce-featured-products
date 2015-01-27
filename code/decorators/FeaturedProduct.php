@@ -24,7 +24,7 @@ class FeaturedProduct_Controller extends DataExtension {
 	);
 	
 	public function getFeaturedProducts($limit = 6, $sort = 'RAND()'){
-		$featuredProducts = Product::get()->filter(array('FeaturedProduct' => 1))->sort('$sort')->limit($limit);
+		$featuredProducts = Product::get()->filter(array('FeaturedProduct' => 1))->sort($sort)->limit($limit);
 		return $featuredProducts;
 	}
 }
